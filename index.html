@@ -6,6 +6,10 @@
     <title>Valentine Day</title>
     <style>
         body {
+            background-image: url('https://www.transparenttextures.com/patterns/hearts.png'), linear-gradient(to bottom, #ffcccc, #ffe6e6);
+background-size: 200px 200px, cover;
+background-repeat: repeat, no-repeat;
+opacity: 0.8;
             font-family: 'Comic Sans MS', cursive, sans-serif;
             text-align: center;
             background: linear-gradient(to bottom, #ffcccc, #ffe6e6);
@@ -58,10 +62,40 @@
         .result {
             font-size: 1.5em;
             margin-top: 20px;
+       .hearts {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+.heart {
+    position: absolute;
+    color: #ff4d4d;
+    font-size: 20px;
+    animation: fall 10s linear infinite;
+}
+@keyframes fall {
+    0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}
         }
     </style>
 </head>
 <body>
+   <div class="hearts">
+    <div class="heart" style="left: 10%; animation-delay: 0s;">❤️</div>
+    <div class="heart" style="left: 20%; animation-delay: 1s;">💖</div>
+    <div class="heart" style="left: 30%; animation-delay: 2s;">❤️</div>
+    <div class="heart" style="left: 40%; animation-delay: 3s;">💖</div>
+    <div class="heart" style="left: 50%; animation-delay: 4s;">❤️</div>
+    <div class="heart" style="left: 60%; animation-delay: 5s;">💖</div>
+    <div class="heart" style="left: 70%; animation-delay: 6s;">❤️</div>
+    <div class="heart" style="left: 80%; animation-delay: 7s;">💖</div>
+    <div class="heart" style="left: 90%; animation-delay: 8s;">❤️</div>
+</div>
     <div id="question">
         <h1>Happy Valentine's Day! 💖</h1>
         <p>Will you be my valentine? 😘</p>
@@ -108,4 +142,5 @@
     </script>
 </body>
 </html>
+
 
