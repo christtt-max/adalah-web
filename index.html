@@ -81,6 +81,30 @@ opacity: 0.8;
     0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
     100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
 }
+            /* Responsive untuk HP (layar kecil) */
+ @media (max-width: 768px) {
+     body {
+         padding: 20px; /* Kurangi padding agar fit di layar kecil */
+         font-size: 14px; /* Kecilkan font utama */
+     }
+     h1 {
+         font-size: 2em; /* Kecilkan judul */
+     }
+     p {
+         font-size: 1em; /* Kecilkan teks */
+     }
+     button {
+         padding: 12px 20px; /* Kecilkan tombol */
+         font-size: 16px; /* Jaga ukuran font tombol agar mudah klik */
+     }
+     .gif img {
+         width: 250px; /* Kecilkan GIF agar fit */
+         height: auto; /* Jaga proporsi */
+     }
+     .hearts .heart {
+         font-size: 15px; /* Kecilkan hati jatuh */
+     }
+ }
         }
     </style>
 </head>
@@ -132,6 +156,7 @@ opacity: 0.8;
     </script>
 </body>
 </html>
+
 
 
 
