@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine Day</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            text-align: center;
+            background: linear-gradient(to bottom, #ffcccc, #ffe6e6);
+            padding: 50px;
+            color: #d63384;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+        }
+        .buttons {
+            margin-top: 30px;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 20px;
+            margin: 10px;
+            border: 2px solid #ff4d4d;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        #yes {
+            background-color: #4CAF50;
+            color: white;
+        }
+        #yes:hover {
+            background-color: #45a049;
+            transform: scale(1.1);
+        }
+        #no {
+            background-color: #f44336;
+            color: white;
+            position: relative;
+        }
+        #no:hover {
+            background-color: #d32f2f;
+        }
+        .gif {
+            margin-top: 20px;
+        }
+        .hidden {
+            display: none;
+        }
+        .result {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="question">
+        <h1>Happy Valentine's Day! 💖</h1>
+        <p>Will you be my valentine? 😘</p>
+        <div class="gif">
+            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExY2toM3ZiMDltNWcxZDJsY3lzdWhhZGw4ZTEwMjV6bHBhZXpxaDhlciZlcD12MV9naWZzX3NlYXJjaCZjdD1n/5Ac3lAE4Ydz6E/giphy.gif" alt="PWEAAAASSEEEE" width="300" height="200">
+        </div>
+        <div class="buttons">
+            <button id="yes">Yes</button>
+            <button id="no">No</button>
+        </div>
+    </div>
+
+    <div id="result" class="hidden">
+        <h1>Yay! makasiiihw kakak cantik! 😍</h1>
+        <p>aaaaaawwwwww makasiw yaawww!</p>
+        <div class="gif">
+            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdHI2aTk0c2NrNmk4YXYzNGltaXo5Y2k4MXlkcGU0OXptbXVhNTc1MCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/C8ih1zB9e9KJLySClx/giphy.gif" alt="yeaaaaaaaayyy" width="300" height="200">
+        </div>
+        <div class="result">
+            <p>❤️❤️❤️</p>
+        </div>
+    </div>
+
+    <script>
+        const noButton = document.getElementById('no');
+        const yesButton = document.getElementById('yes');
+        const questionDiv = document.getElementById('question');
+        const resultDiv = document.getElementById('result');
+
+        noButton.addEventListener('click', function() {
+            // Pindahkan tombol "No" ke posisi acak di layar
+            const randomX = Math.floor(Math.random() * (window.innerWidth - 150));
+            const randomY = Math.floor(Math.random() * (window.innerHeight - 150));
+            noButton.style.position = 'absolute';
+            noButton.style.left = randomX + 'px';
+            noButton.style.top = randomY + 'px';
+        });
+
+        yesButton.addEventListener('click', function() {
+            // Sembunyikan halaman pertanyaan dan tampilkan hasil
+            questionDiv.classList.add('hidden');
+            resultDiv.classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>
