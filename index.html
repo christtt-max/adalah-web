@@ -62,7 +62,8 @@ opacity: 0.8;
         .result {
             font-size: 1.5em;
             margin-top: 20px;
-        #result {
+        }
+            #result {
     background-image: url('IMG-20260206-WA0003.jpg');
     background-size: cover;
     background-position: center;
@@ -75,6 +76,15 @@ opacity: 0.8;
     margin: 20px auto;
     max-width: 90%;
         }
+          @media (max-width: 768px) {
+    #result img {
+        width: 200px; /* Kecilkan foto di HP */
+        height: 200px;
+    }
+    #result {
+        padding: 30px; /* Kurangi padding di HP */
+    }
+} 
        .hearts {
     position: absolute;
     top: 0;
@@ -169,6 +179,7 @@ opacity: 0.8;
     </script>
 </body>
 </html>
+
 
 
 
